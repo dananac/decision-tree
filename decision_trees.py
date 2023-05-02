@@ -54,8 +54,8 @@ def build_tree(X, Y, max_depth, dt):
     sample_array1 = np.array(l1)
     sample_array2 = np.array(l2)
 
-    data_array = sample_array1.astype(np.float)
-    label_array = sample_array2.astype(np.int)
+    data_array = sample_array1.astype(float)
+    label_array = sample_array2.astype(int)
     #print(data_array)
     #print(label_array)
 
@@ -202,8 +202,8 @@ def RF_build_random_forest(X,Y,max_depth,num_of_trees):
         l2.append(row)
     sample_array1 = np.array(l1)
     sample_array2 = np.array(l2)
-    data_array = sample_array1.astype(np.float)
-    label_array = sample_array2.astype(np.int)
+    data_array = sample_array1.astype(float)
+    label_array = sample_array2.astype(int)
 
     num_samples = len(label_array)
     samples_per_tree = num_samples * .10
