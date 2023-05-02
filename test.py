@@ -15,8 +15,9 @@ class TestMethods(unittest.TestCase):
     def test_build_list(self):
         file_name = "data1.csv"
         testData = np.genfromtxt(file_name, dtype=str, delimiter=',')
-        self.assertTrue(ds.build_list(testData))
-
+        testArray = [0., 0., 0., 0., 0., 0.]
+        self.assertNotEqual(ds.build_nparray(testData), testArray)
+        
     # tests building dict
     def test_build_dict(self):
         file_name = "data1.csv"
