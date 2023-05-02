@@ -7,7 +7,7 @@ import decision_trees as dt
 def test_build_nparray():
     file_name = "data1.csv"
     testData = np.genfromtxt(file_name, dtype=str, delimiter=',')
-    assert ds.build_nparray(testData)
+    assert len(ds.build_nparray(testData)) == 0
 
 # tests building list
 def test_build_list():
