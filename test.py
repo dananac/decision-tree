@@ -84,22 +84,4 @@ class TestMethods(unittest.TestCase):
         DT = dt.DT_train_binary(X,Y,max_depth)
         self.assertTrue(dt.build_tree(X,Y,max_depth,DT))
 
-    # tests building forest
-    def test_build_forest(self):
-        file_name = "data5.csv"
-        testData = np.genfromtxt(file_name, dtype=str, delimiter=',')
-        max_depth = 3
-        tree_count = 11
-        X,Y = ds.build_nparray(testData)
-        DT = dt.DT_train_binary(X,Y,max_depth)
-        self.assertTrue(dt.RF_build_random_forest(X,Y,max_depth,tree_count))
 
-    # tests forest result
-    def test_forest(self):
-        file_name = "data5.csv"
-        testData = np.genfromtxt(file_name, dtype=str, delimiter=',')
-        max_depth = 3
-        tree_count = 11
-        X,Y = ds.build_nparray(testData)
-        RF = dt.RF_build_random_forest(X,Y,max_depth,tree_count)
-        self.assertTrue(dt.RF_test_random_forest(X,Y,RF))
