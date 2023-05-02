@@ -8,8 +8,9 @@ class TestMethods(unittest.TestCase):
     def test_build_nparray(self):
         file_name = "data1.csv"
         testData = np.genfromtxt(file_name, dtype=str, delimiter=',')
-        self.assertTrue(ds.build_nparray(testData))
-
+        testArray = [0., 0., 0., 0., 0., 0.]
+        self.assertNotEqual(ds.build_nparray(testData), testArray)
+        
     # tests building list
     def test_build_list(self):
         file_name = "data1.csv"
