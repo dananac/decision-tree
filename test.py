@@ -77,7 +77,7 @@ class TestMethods(unittest.TestCase):
 
     # tests building tree with data for different edge cases
     def test_build_tree_data3(self):
-        file_name = "data4.csv"
+        file_name = "data5.csv"
         testData = np.genfromtxt(file_name, dtype=str, delimiter=',')
         max_depth = 3
         X,Y = ds.build_nparray(testData)
@@ -86,7 +86,7 @@ class TestMethods(unittest.TestCase):
 
     # tests building forest
     def test_build_forest(self):
-        file_name = "data1.csv"
+        file_name = "data5.csv"
         testData = np.genfromtxt(file_name, dtype=str, delimiter=',')
         max_depth = 3
         tree_count = 11
@@ -96,7 +96,7 @@ class TestMethods(unittest.TestCase):
 
     # tests forest result
     def test_forest(self):
-        file_name = "data1.csv"
+        file_name = "haberman.csv"
         testData = np.genfromtxt(file_name, dtype=str, delimiter=',')
         max_depth = 3
         tree_count = 11
