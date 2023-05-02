@@ -119,4 +119,22 @@ class TestMethods(unittest.TestCase):
         samples, label_dict = ds.build_dict(data)
         self.assertEqual(samples, expected_samples)
         self.assertEqual(label_dict, expected_label_dict)
+        
+    def test_integration_tree_prediciton(self):
+        file_name = "data1.csv"
+        testData = np.genfromtxt(file_name, dtype=str, delimiter=',')
+        max_depth = 3
+        X,Y = ds.build_nparray(testData)
+        DT = dt.DT_train_binary(X,Y,max_depth)
+        predicition = dt.DT_make_prediction(X[1], DT)
+        self.assertEqual(predicition, Y[0])
+
+    def test_integration_accuracy(self):
+        file_name = "data1.csv"
+        testData = np.genfromtxt(file_name, dtype=str, delimiter=',')
+        max_depth = 3
+        X,Y = ds.build_nparray(testData)
+        DT = dt.DT_train_binary(X,Y,max_depth)
+        acc = dt.DT_test_binary(X,Y,DT)
+        assert acc >= 0 and acc <= 1
 
