@@ -7,19 +7,19 @@ import decision_trees as dt
 def test_build_nparray():
     file_name = "data1.csv"
     testData = np.genfromtxt(file_name, dtype=str, delimiter=',')
-    self.assertTrue(ds.build_nparray(testData))
+    assertTrue(ds.build_nparray(testData))
 
 # tests building list
 def test_build_list():
     file_name = "data1.csv"
     testData = np.genfromtxt(file_name, dtype=str, delimiter=',')
-    self.assertTrue(ds.build_list(testData))
+    assertTrue(ds.build_list(testData))
 
 # tests building dict
 def test_build_dict():
     file_name = "data1.csv"
     testData = np.genfromtxt(file_name, dtype=str, delimiter=',')
-    self.assertTrue(ds.build_dict(testData))
+    assertTrue(ds.build_dict(testData))
 
 # tests training data
 def test_train_data():
@@ -27,7 +27,7 @@ def test_train_data():
     testData = np.genfromtxt(file_name, dtype=str, delimiter=',')
     max_depth = 3
     X,Y = ds.build_nparray(testData)
-    self.assertTrue(dt.DT_train_binary(X,Y,max_depth))
+    assertTrue(dt.DT_train_binary(X,Y,max_depth))
 
 # tests tree result
 def test_tree():
@@ -36,7 +36,7 @@ def test_tree():
     max_depth = 3
     X,Y = ds.build_nparray(testData)
     DT = dt.DT_train_binary(X,Y,max_depth)
-    self.assertTrue(dt.DT_test_binary(X,Y,DT))
+    assertTrue(dt.DT_test_binary(X,Y,DT))
 
 # tests making prediction
 def test_make_prediction():
@@ -45,7 +45,7 @@ def test_make_prediction():
     max_depth = 3
     X,Y = ds.build_nparray(testData)
     DT = dt.DT_train_binary(X,Y,max_depth)
-    self.assertTrue(dt.DT_make_prediction(Y,DT))
+    assertTrue(dt.DT_make_prediction(Y,DT))
 
 # tests building tree
 def test_build_tree():
@@ -54,7 +54,7 @@ def test_build_tree():
     max_depth = 3
     X,Y = ds.build_nparray(testData)
     DT = dt.DT_train_binary(X,Y,max_depth)
-    self.assertTrue(dt.build_tree(X,Y,max_depth,DT))
+    assertTrue(dt.build_tree(X,Y,max_depth,DT))
 
 # tests building tree with data for different edge cases
 def test_build_tree_data2():
@@ -63,7 +63,7 @@ def test_build_tree_data2():
     max_depth = 3
     X,Y = ds.build_nparray(testData)
     DT = dt.DT_train_binary(X,Y,max_depth)
-    self.assertTrue(dt.build_tree(X,Y,max_depth,DT))
+    assertTrue(dt.build_tree(X,Y,max_depth,DT))
 
 # tests building tree with data for different edge cases
 def test_build_tree_data3():
@@ -72,7 +72,7 @@ def test_build_tree_data3():
     max_depth = 3
     X,Y = ds.build_nparray(testData)
     DT = dt.DT_train_binary(X,Y,max_depth)
-    self.assertTrue(dt.build_tree(X,Y,max_depth,DT))
+    assertTrue(dt.build_tree(X,Y,max_depth,DT))
 
 # tests building tree with data for different edge cases
 def test_build_tree_data4():
@@ -81,4 +81,4 @@ def test_build_tree_data4():
     max_depth = 3
     X,Y = ds.build_nparray(testData)
     DT = dt.DT_train_binary(X,Y,max_depth)
-    self.assertTrue(dt.build_tree(X,Y,max_depth,DT))
+    assertTrue(dt.build_tree(X,Y,max_depth,DT))
