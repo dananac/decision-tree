@@ -85,7 +85,7 @@ class TestMethods(unittest.TestCase):
         DT = dt.DT_train_binary(X,Y,max_depth)
         self.assertTrue(dt.build_tree(X,Y,max_depth,DT))
 
-            def test_integration_build_nparray(self):
+    def test_integration_build_nparray(self):
         data = [[1, 2, 3, 4],
                 [5, 6, 7, 8],
                 [9, 10, 11, 12]]
