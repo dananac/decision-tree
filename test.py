@@ -85,4 +85,38 @@ class TestMethods(unittest.TestCase):
         DT = dt.DT_train_binary(X,Y,max_depth)
         self.assertTrue(dt.build_tree(X,Y,max_depth,DT))
 
+        def test_build_nparray():
+    data = [[1, 2, 3, 4],
+            [5, 6, 7, 8],
+            [9, 10, 11, 12]]
+    expected_data_array = np.array([[2., 3.], [6., 7.], [10., 11.]])
+    expected_label_array = np.array([4, 8, 12])
+    data_array, label_array = build_nparray(data)
+    assert np.array_equal(data_array, expected_data_array)
+    assert np.array_equal(label_array, expected_label_array)
+
+def test_build_list():
+    data = [[1, 2, 3, 4],
+            [5, 6, 7, 8],
+            [9, 10, 11, 12]]
+    expected_data_list = [[2.0, 3.0], [6.0, 7.0], [10.0, 11.0]]
+    expected_label_list = [4, 8, 12]
+    data_list, label_list = build_list(data)
+    assert data_list == expected_data_list
+    assert label_list == expected_label_list
+
+def test_build_dict():
+    data = [['a', 'b', 'c', 'd', 'label'],
+            ['1', '2', '3', '4', '0'],
+            ['5', '6', '7', '8', '1'],
+            ['9', '10', '11', '12', '0']]
+    expected_samples = {
+        0: {'a': 1.0, 'b': 2.0, 'c': 3.0, 'd': 4.0},
+        1: {'a': 5.0, 'b': 6.0, 'c': 7.0, 'd': 8.0},
+        2: {'a': 9.0, 'b': 10.0, 'c': 11.0, 'd': 12.0}
+    }
+    expected_label_dict = {0: 0, 1: 1, 2: 0}
+    samples, label_dict = build_dict(data)
+    assert samples == expected_samples
+    assert label_dict == expected_label_dict
 
