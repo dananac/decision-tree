@@ -15,8 +15,8 @@ def build_nparray(data):
     sample_array1 = np.array(l1[1:])
     sample_array2 = np.array(l2[1:])
 
-    data_array = sample_array1.astype(np.float)
-    label_array = sample_array2.astype(np.int)
+    data_array = sample_array1.astype(float)
+    label_array = sample_array2.astype(int)
 
     return(data_array,label_array)
 
