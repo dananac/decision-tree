@@ -28,7 +28,7 @@ jobs:
         python -m pip install --upgrade pip
         python -m pip install numpy
         python -m pip install flake8 pytest pytest-cov
-        pythom -m pip install pytest coverage
+        python -m pip install pytest coverage
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
     - name: Lint with flake8
       run: |
