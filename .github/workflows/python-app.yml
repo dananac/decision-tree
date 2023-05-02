@@ -38,4 +38,4 @@ jobs:
     - name: Test with pytest and calculate coverage
       run: |
         python -m pytest test.py
-        coverage run -m unittest discover
+        coverage html
