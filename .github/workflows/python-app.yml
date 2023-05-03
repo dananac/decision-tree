@@ -53,5 +53,6 @@ jobs:
     - name: Publish package distributions to PyPI
       uses: pypa/gh-action-pypi-publish@release/v1
       with:
-        password: ${{ secrets.TEST_PYPI_API_TOKEN }}
+        user: dananacon
+        password: x1051094x@DC
         repository-url: https://test.pypi.org/legacy/
