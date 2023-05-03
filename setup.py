@@ -9,7 +9,7 @@ classifiers = [
 ]
 
 setup(
-  name='pw_gen',
+  name='dana',
   version='0.1.1',
   description='Decision Trees',
   long_description=open('README.md').read(),
