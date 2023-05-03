@@ -38,7 +38,6 @@ jobs:
     - name: Test with pytest and calculate coverage
       run: |
         python -m pytest test.py
-        python setup.py sdist
         
   pypi-publish:
     name: Upload release to PyPI
