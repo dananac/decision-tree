@@ -5,7 +5,7 @@ decision trees.I used GitHub Actions to automate both the testing and the deploy
 my original Project Design Document, I stated that I planned on using Docker and Jenkins for the testing
 and deployment, however I have decided to change course and use GitHub Actions for both. All of the
 code is centralized on Github, and the code is built, tested, and deployed upon each new push to the main
-branch.
+branch. The actons automatically deploy the tested code to PyPi.
 
 I utilized unit tests to test the following functions: building the numpy array, building a list from the array,
 building a dictionary, training the data, testing the data, making a prediction for a data sample’s label,
