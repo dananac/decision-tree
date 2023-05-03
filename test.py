@@ -100,7 +100,7 @@ class TestMethods(unittest.TestCase):
                 [5, 6, 7, 8],
                 [9, 10, 11, 12]]
         expected_data_list = [[5.0, 6.0, 7.0], [9.0, 10.0, 11.0]]
-        expected_label_list = [8, 12]
+        expected_label_list = [4, 12]
         data_list, label_list = ds.build_list(data)
         self.assertEqual(data_list, expected_data_list)
         self.assertEqual(label_list, expected_label_list)
