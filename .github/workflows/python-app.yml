@@ -57,6 +57,7 @@ jobs:
       run: |
         python -m pip install --upgrade pip
         pip install build
+        pip install --no-index --find-links=../jsii-test/dist/python acme.hello_jsii
         pip install --upgrade setuptools
         pip install wheel
     - name: Build package
