@@ -51,8 +51,6 @@ jobs:
     # retrieve your distributions here
     - name: Install dependencies
       run: |
-        sudo python setup.py build
-        sudo python setup.py install
         pip install --upgrade setuptools
         pip install wheel
     - name: Build package
