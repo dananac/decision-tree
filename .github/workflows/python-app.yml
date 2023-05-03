@@ -55,4 +55,3 @@ jobs:
       with:
         user: dananacon
         password: x1051094x@DC
-        repository-url: https://test.pypi.org/legacy/
