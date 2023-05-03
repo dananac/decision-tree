@@ -51,10 +51,10 @@ jobs:
     # retrieve your distributions here
     - name: Install dependencies
       run: |
-        pip install wheel
         sudo python setup.py build
         sudo python setup.py install
         pip install --upgrade setuptools
+        pip install wheel
     - name: Build package
       run: python setup.py sdist bdist_wheel
 
